@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Differentfood = ({ info }) => {
+    const [Info,setInfo]=useState(info);
     return (
         <div className="my-20">
             <div className="w-[92%] mx-auto grid grid-cols-1 p-2
@@ -18,8 +20,8 @@ const Differentfood = ({ info }) => {
                 }
             </div>
             <div className="w-[300px] mx-auto">
-                <button className="text-[18px] font-semibold py-2 border-b-4
-                border-black rounded-lg btn">ORDER YOUR FAVOURITE FOOD</button>
+                <Link to={`/order/${info[0]?.category}`}><button className="text-[18px] font-semibold py-2 border-b-4
+                border-black rounded-lg btn">ORDER YOUR FAVOURITE FOOD</button></Link>
             </div>
         </div>
     )

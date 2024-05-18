@@ -25,7 +25,7 @@ const router = createBrowserRouter([
         element: <Menupage></Menupage>
       },
       {
-        path: '/order',
+        path: '/order/:title',
         element: <Order></Order>
       },
       {
