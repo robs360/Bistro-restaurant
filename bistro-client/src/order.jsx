@@ -16,6 +16,7 @@ const Order = () => {
     const [info4, setInfo4] = useState([]);
     const [info5, setInfo5] = useState([]);
    console.log("shahadat")
+   console.log("asdfsadfsdfsaf")
     useEffect(() => {
         fetch('/blog.json')
             .then(res => res.json())
