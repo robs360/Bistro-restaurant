@@ -7,15 +7,15 @@ import { NavLink, useParams } from "react-router-dom";
 const Order = () => {
    
     const category=['salad','soup','dessert','drinks','pizza'];
-    const {item}=useParams();
-    const initial=category.indexOf(item);
+    const {title}=useParams();
+    const initial=category.indexOf(title);
     const [index,setIndex]=useState(initial);
     const [info, setInfo] = useState([]);
     const [info2, setInfo2] = useState([]);
     const [info3, setInfo3] = useState([]);
     const [info4, setInfo4] = useState([]);
     const [info5, setInfo5] = useState([]);
-   
+   console.log("shahadat")
     useEffect(() => {
         fetch('/blog.json')
             .then(res => res.json())
